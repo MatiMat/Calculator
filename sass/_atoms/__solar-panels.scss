@@ -1,0 +1,33 @@
+.solar-panels {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    width: 46px;
+    height: 32px;
+    border: 1px solid $black;
+    border-top-left-radius: $key_border_radius_in;
+    border-bottom-left-radius: $key_border_radius_in;
+    background: linear-gradient(135deg, $solar_panel_color 0%, lighten($black, 8) 100%);
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: -1px;
+        display: inline-block;
+        width: 44px;
+        height: 30px;
+        content: '';
+        border: inherit;
+        background: inherit;
+    }
+
+    &::before {
+        left: 44px;
+        
+    }
+    &::after {
+        left: 88px;
+        border-top-right-radius: $key_border_radius_in;
+        border-bottom-right-radius: $key_border_radius_in;
+    }
+}

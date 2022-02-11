@@ -1,0 +1,31 @@
+.btn-f1 { grid-area: btn_f1; }
+.btn-f2 { grid-area: btn_f2; }
+.btn-f3 { grid-area: btn_f3; }
+.btn-f4 { grid-area: btn_f4; }
+.btn-f5 { grid-area: btn_f5; }
+.btn-f6 { grid-area: btn_f6; }
+.btn-f7 { grid-area: btn_f7; }
+.btn-f8 { grid-area: btn_f8; }
+.btn-f9 { grid-area: btn_f9; }
+
+.btn-1 { grid-area: btn_1; }
+.btn-2 { grid-area: btn_2; }
+.btn-3 { grid-area: btn_3; }
+.btn-4 { grid-area: btn_4; }
+.btn-5 { grid-area: btn_5; }
+.btn-6 { grid-area: btn_6; }
+.btn-7 { grid-area: btn_7; }
+.btn-8 { grid-area: btn_8; }
+.btn-9 { grid-area: btn_9; }
+.btn-0 { grid-area: btn_0; }
+
+.keyboard {
+    display: grid;
+    grid-template-areas:
+    'btn_f1 btn_f9 btn_f2 btn_f3'
+    'btn_7 btn_8 btn_9 btn_f4'
+    'btn_4 btn_5 btn_6 btn_f5'
+    'btn_1 btn_2 btn_3 btn_f6'
+    'btn_0 btn_0 btn_f8 btn_f7';
+    grid-gap: 5px;
+}

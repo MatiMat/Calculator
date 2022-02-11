@@ -1,0 +1,129 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    margin: 4px;
+    padding: 4px 15px;
+    min-width: 120px;
+    min-height: 60px;
+    border: 1px solid $dark;
+    border-radius: $key_border_radius;
+    background: $dark linear-gradient(180deg, $dark, $dark_1);
+    box-shadow: inset -8px 0 8px rgba($black, .15),
+        inset 0 -8px 8px rgba($black, .25),
+        0 0 0 2px rgba($black, .75), 
+        5px 8px 10px 0 rgba($black, .4);
+    transition: all .35s;
+    cursor: pointer;
+
+    &::before {
+        position: absolute;
+        top: 2px;
+        left: 3px;
+        bottom: 6px;
+        right: 6px;
+        content: '';
+        background: linear-gradient(90deg, rgba($dark, 0), rgba($white, .25));
+        border-radius: $key_border_radius_in;
+        border-top: 1px solid $dark;
+        border-left: 1px solid lighten($dark, 5);
+        border-bottom: 1px solid lighten($dark, 5);
+        box-shadow: -10px -10px 10px rgba($white, .05), 10px 5px 10px rgba($black, .15);
+    }
+
+    .btn-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        color: $white;
+        font: 400 1.5rem/1.8rem $base_font;
+        text-transform: uppercase;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover,
+    &.press {
+        background: $dark_1;
+        box-shadow: inset -8px 0 8px rgba($black, .15),
+        inset 0 -8px 8px rgba($black, .25),
+        0 0 0 2px rgba($black, .65), 
+        0px 5px 5px 0 rgba($black, .4);
+        transform: translate(1px, 1px);
+
+        &::before {
+            background: linear-gradient(90deg, rgba($dark, .05), rgba($white, .3));
+            border-bottom-color: $dark;
+            border-right-color: lighten($dark, 8);
+            border-top-color: lighten($dark, 8);
+            box-shadow: -10px -10px 10px rgba($white, .03), 10px 5px 10px rgba($black, .15);
+        }
+    }
+
+    &--red {
+        background: $red linear-gradient(180deg, $red, $red_1);
+        border-color: $red;
+        box-shadow: inset -8px 0 8px rgba($black, .15),
+        inset 0 -8px 8px rgba($black, .25),
+        0 0 0 1px rgba($red_1, .75), 
+        5px 8px 10px 0 rgba($black, .4);
+
+        &::before {
+            background: linear-gradient(90deg, rgba($red_1, 0), rgba($white, .35));
+            border-radius: $key_border_radius_in;
+            border-top: 1px solid $red_1;
+            border-left: 1px solid lighten($red, 5);
+            border-bottom: 1px solid lighten($red, 5);
+            box-shadow: -10px -10px 10px rgba($white, .05), 10px 5px 10px rgba($black, .15);
+        }
+
+        &:hover,
+        &.press {
+            border-color: $red_1;
+            background: $red_1;
+            box-shadow: inset -8px 0 8px rgba($black, .15), 
+                inset 0 -8px 8px rgba($black, .25), 
+                0 0 0 2px rgba($red, .65), 
+                0px 5px 5px 0 rgba($red_1, .4);
+    
+            &::before {
+                background: linear-gradient(90deg, rgba($red, .05), rgba($white, .3));
+                border-bottom-color: $red_1;
+                border-right-color: lighten($red, 8);
+                border-top-color: lighten($red, 8);
+            }
+        }
+    }
+    &--blue {
+        background: $blue linear-gradient(180deg, $blue, $blue_1);
+        border-color: $blue;
+        box-shadow: inset -8px 0 8px rgba($black, .15),
+        inset 0 -8px 8px rgba($black, .25),
+        0 0 0 1px rgba($blue_1, .75), 
+        5px 8px 10px 0 rgba($black, .4);
+
+        &::before {
+            background: linear-gradient(90deg, rgba($blue_1, 0), rgba($white, .35));
+            border-top: 1px solid $blue_1;
+            border-left: 1px solid lighten($blue, 5);
+            border-bottom: 1px solid lighten($blue, 5);
+            box-shadow: -10px -10px 10px rgba($white, .05), 10px 5px 10px rgba($black, .15);
+        }
+
+        &:hover,
+        &.press {
+            border-color: $blue_1;
+            background: $blue_1;
+            box-shadow: inset -8px 0 8px rgba($black, .15), 
+                inset 0 -8px 8px rgba($black, .25), 
+                0 0 0 2px rgba($blue, .65), 
+                0px 5px 5px 0 rgba($blue_1, .4);
+    
+            &::before {
+                background: linear-gradient(90deg, rgba($blue, .05), rgba($white, .3));
+                border-bottom-color: $blue_1;
+                border-right-color: lighten($blue, 8);
+                border-top-color: lighten($blue, 8);
+            }
+        }
+    }
+}

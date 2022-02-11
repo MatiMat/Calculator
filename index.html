@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Calculator - typescript + atomic design scalable modular CSS SASS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet"/>
+    <link href="./index.css" rel="stylesheet" />
+    <script async src="./js/calculator.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="top-panel">
+                <header class="head">
+                    <span class="solar-panels"></span>
+                    <p class="headline">Simple Calculator</p>
+                </header>
+                <div class="screen">
+                    <input type="text" class="screen-line operand operand--previous" 
+                    data-previous-operand value="" readonly name="previous-operand"/>
+                    <input type="text" class="screen-line operand operand--current" 
+                    data-current-operand value="0" readonly name="current-operand" autofocus/>
+                </div>
+            </div>
+            <div class="bottom-panel">
+                <div class="keyboard">
+                    <button class="btn btn--red btn-f1" data-clear>
+                        <span class="btn-label">C</span>
+                    </button>
+                    <button class="btn btn--red btn-f9" data-delete>
+                        <span class="btn-label">del</span>
+                    </button>
+                    <button class="btn btn-f2" data-operation="%">
+                        <span class="btn-label">%</span>
+                    </button>
+                    <button class="btn btn-f3" data-operation="/">
+                        <span class="btn-label">/</span>
+                    </button>
+                    <button class="btn btn-f4" data-operation="*">
+                        <span class="btn-label">*</span>
+                    </button>
+                    <button class="btn btn-f5" data-operation="-">
+                        <span class="btn-label">-</span>
+                    </button>
+                    <button class="btn btn-f6" data-operation="+">
+                        <span class="btn-label">+</span>
+                    </button>
+                    <button class="btn btn--blue btn-f7" data-equals>
+                        <span class="btn-label">=</span>
+                    </button>
+                    <button class="btn btn-f8" data-number="dot">
+                        <span class="btn-label">.</span>
+                    </button>
+
+                    <button class="btn" data-number="1">
+                        <span class="btn-label">1</span>
+                    </button>
+                    <button class="btn" data-number="2">
+                        <span class="btn-label">2</span>
+                    </button>
+                    <button class="btn" data-number="3">
+                        <span class="btn-label">3</span>
+                    </button>
+                    <button class="btn" data-number="4">
+                        <span class="btn-label">4</span>
+                    </button>
+                    <button class="btn" data-number="5">
+                        <span class="btn-label">5</span>
+                    </button>
+                    <button class="btn" data-number="6">
+                        <span class="btn-label">6</span>
+                    </button>
+                    <button class="btn" data-number="7">
+                        <span class="btn-label">7</span>
+                    </button>
+                    <button class="btn" data-number="8">
+                        <span class="btn-label">8</span>
+                    </button>
+                    <button class="btn" data-number="9">
+                        <span class="btn-label">9</span>
+                    </button>
+                    <button class="btn btn-0" data-number="0">
+                        <span class="btn-label">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

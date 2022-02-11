@@ -1,0 +1,24 @@
+.screen {
+    position: relative;
+    display: flex;
+    margin: 6px 0;
+    width: 100%;
+    min-height: 80px;
+    flex-direction: column;
+    border-radius: $key_border_radius_in;
+    background-color: $screen;
+    box-shadow: 
+        -1px 2px 2px 1px rgba($black, .75),
+        1px -1px 2px 1px rgba($black, .75);
+    &::before {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        right: 2px;
+        content: '';
+        border-radius: $key_border_radius_in;
+        background: linear-gradient(120deg, rgba($dark, .1), rgba($white, .25));
+        background: linear-gradient(120deg, rgba($dark, .15) 0%, rgba($dark, 0) 70%, rgba($white, .08) 70%, rgba($white, .35) 100%);
+    }
+}
